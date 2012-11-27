@@ -11,7 +11,7 @@ using namespace std;
 ListGraph::ListGraph(int numNodes){
 	num_edges = 0;
 	
-	edgeList = vector<EList>(numNodes);
+	edgeList.resize(numNodes); //Example in class is easier to understand than original code
 }
 
 ListGraph::~ListGraph(){}
