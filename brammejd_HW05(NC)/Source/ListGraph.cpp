@@ -26,7 +26,7 @@ ListGraph::~ListGraph(){}
  *     weight > 0
  */
 void ListGraph::addEdge(NodeID u, NodeID v, EdgeWeight weight){
-
+	//check for duplicates!
 	edgeList[u].push_back(NWPair(v, weight));
 	edgeList[v].push_back(NWPair(u, weight));
 
@@ -41,6 +41,7 @@ void ListGraph::addEdge(NodeID u, NodeID v, EdgeWeight weight){
  */
 EdgeWeight ListGraph::weight(NodeID u, NodeID v) const{
 	EList list = edgeList[u];
+	//do I need to use const_iterator?
 	for(EList::iterator iterator = list.begin(); iterator != list.end(); iterator++){
 		if(iterator->first == v){
 			return iterator->second;
