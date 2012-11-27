@@ -12,7 +12,7 @@ MatrixGraph::MatrixGraph(unsigned num_nodes){
 	for(int i = 0; i < num_nodes; i++){
 		M[i] = vector<EdgeWeight>(num_nodes); //i = what row we are on, now we have a row of EdgeWeights
 		for(int j = 0; j < num_nodes; j++){
-			M[i][j] = -1; //sets all of our weights to -1 by default
+			M[i][j] = 0; //sets all of our weights to 0 by default
 		}
 	}
 }

@@ -65,7 +65,7 @@ bool Tester::test_2() {
     for (NodeID j=0; j < 15; j++)
       if (i != j && G->weight(i, j) != 0) 
 	return cleanAndExit(G, false);
-
+	
   return cleanAndExit(G, true);
 }
 

@@ -29,6 +29,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5FDB6D16-5FBE-4E31-8B82-5AC290220B2C}</ProjectGuid>
     <RootNamespace>brammejd_HW05NC</RootNamespace>
+    <ProjectName>brammejd_HW05_NC</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -53,10 +54,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Daddy\Documents\CSE274\HW05\brammejd_HW05%28NC%29\brammejd_HW05%28NC%29\Include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Daddy\Documents\CSE274\HW05\brammejd_HW05_NC\brammejd_HW05%28NC%29\Include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <SourcePath>C:\Users\Daddy\Documents\CSE274\HW05\brammejd_HW05%28NC%29\brammejd_HW05%28NC%29\Source;$(SourcePath)</SourcePath>
+    <SourcePath>C:\Users\Daddy\Documents\CSE274\HW05\brammejd_HW05_NC\brammejd_HW05%28NC%29\Source;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
