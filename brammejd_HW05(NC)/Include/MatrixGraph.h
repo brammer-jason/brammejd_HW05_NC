@@ -23,7 +23,8 @@ class MatrixGraph : public Graph {
   virtual unsigned numEdges() const;
 
  private:
-  MatrixGraph() {;}
+  //We don't want to use a constructor with no parameters!!
+  //MatrixGraph() {;}
 
   std::vector< std::vector<EdgeWeight> > M;
   int num_edges;
