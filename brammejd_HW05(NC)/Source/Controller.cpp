@@ -56,7 +56,7 @@ void deleteStarbucksGraph(Graph* G, bool use_matrix) {
 	* a portion of the main function, below).
 	********************************/
 
-/*
+
 void testSingleTSP(StarbucksMap& SB, int size, bool use_matrix) {
   vector<Store> R = SB.randomSet(size);
   Graph* G = createStarbucksGraph(R, use_matrix);
@@ -96,7 +96,7 @@ pair<int,int> testSpeedTSP(StarbucksMap& SB, double time_limit, bool use_matrix)
 	}
 	return make_pair(n,totalTime);
 }
-*/
+
 
 int main(int argc, char** argv) {
   int n = 5;
@@ -123,12 +123,12 @@ int main(int argc, char** argv) {
   //// of size n, and test your TSP algorithm on a random ListGraph of size n.
 
   //// Uncomment the following three lines once your TSP function has been written
-  //StarbucksMap SB;
+  StarbucksMap SB;
 
-  //testSingleTSP(SB, 5, true);
-  //testSingleTSP(SB, 5, false);
+  testSingleTSP(SB, 5, true);
+  testSingleTSP(SB, 5, false);
 
-  //pair<int,int> p = testSpeedTSP(SB, 60, true);
+  pair<int,int> p = testSpeedTSP(SB, 60, true);
 
   return 0;
 }

@@ -25,6 +25,7 @@
     <ClCompile Include="Source\MatrixGraph.cpp" />
     <ClCompile Include="Source\StarbucksMap.cpp" />
     <ClCompile Include="Source\Tester.cpp" />
+    <ClCompile Include="Source\TSPAlg.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5FDB6D16-5FBE-4E31-8B82-5AC290220B2C}</ProjectGuid>
