@@ -19,9 +19,13 @@ void tour(vector<NodeID> locations, int totalLocs, int start){
 	if(totalLocs - start == 1){
 		double curTour = 0;
 		for(int i = 0; i < totalLocs; i++){
-			curTour += graphToTest->weight(locations[i], locations[i + 1]);
+			if(i == totalLocs - 1){
+				curTour += graphToTest->weight(locations[totalLocs - 1], locations[0]); //loop back around to the front for total tour length
+			} else {
+				curTour += graphToTest->weight(locations[i], locations[i + 1]);
+			}
 		}
-		if(curTour < bestLength){
+		if(bestLength == 0 || curTour < bestLength){
 			bestLength = curTour;
 			best = locations;
 		}
@@ -38,6 +42,9 @@ void tour(vector<NodeID> locations, int totalLocs, int start){
 std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G){
 	graphToTest = G;
 	vector<NodeID> locs = vector<NodeID>(G->size());
+
+	bestLength = 0;
+	best = locs;
 
 	for(int i = 0; i < G->size(); i++){
 		locs[i] = i;
