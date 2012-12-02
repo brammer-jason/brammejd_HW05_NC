@@ -60,7 +60,7 @@ void deleteStarbucksGraph(Graph* G, bool use_matrix) {
 void testSingleTSP(StarbucksMap& SB, int size, bool use_matrix) {
   vector<Store> R = SB.randomSet(size);
   Graph* G = createStarbucksGraph(R, use_matrix);
-  pair<vector<NodeID>, EdgeWeight> p = TSP(G);
+  pair<vector<NodeID>, EdgeWeight> p = TSP(G, false);
 
   EdgeWeight actual = 0;
   for (int i=0; i < size-1; i++)
@@ -86,11 +86,17 @@ pair<int,int> testSpeedTSP(StarbucksMap& SB, double time_limit, bool use_matrix)
 		  Graph* G = createStarbucksGraph(R, use_matrix);
 
 		  int startTime = timeGetTime();
-		  pair<vector<NodeID>, EdgeWeight> p = TSP(G);
+		  pair<vector<NodeID>, EdgeWeight> p = TSP(G, false); //Uses brute force version
 		  int newTime = timeGetTime() - startTime;
 		  cout << "TSP Speed: Finished " << n << " cities in " << newTime/1000.0 << " seconds." << endl;
+
+		  int startTimeTwo = timeGetTime();
+		  pair<vector<NodeID>, EdgeWeight> q = TSP(G, true); //Uses heuristic first attempt version
+		  int newTimeTwo = timeGetTime() - startTimeTwo;
+		  cout << "TSP Speed: Finished " << n << " cities in " << newTimeTwo/1000.0 << " seconds. (Heuristic Version)" << endl;
+
 		  if (newTime/1000.0 > time_limit)
-			  break;
+			 // break;
 		  totalTime = newTime;
 		  n++;
 	}

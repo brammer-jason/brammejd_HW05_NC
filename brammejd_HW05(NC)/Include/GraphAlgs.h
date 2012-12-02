@@ -20,4 +20,6 @@
  *     Every pair of nodes u,v  (u != v) has an edge connecting the of weight > 0.
  */
 
-std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G);
+//std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G);
+
+std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G, bool heur);

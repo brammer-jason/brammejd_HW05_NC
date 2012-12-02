@@ -41,7 +41,7 @@ void ListGraph::addEdge(NodeID u, NodeID v, EdgeWeight weight){
  */
 EdgeWeight ListGraph::weight(NodeID u, NodeID v) const{
 	EList list = edgeList[u];
-	//do I need to use const_iterator?
+	//do I need to use const_iterator? No, I created a deep copy of the edgeList[u], const not needed
 	for(EList::iterator iterator = list.begin(); iterator != list.end(); iterator++){
 		if(iterator->first == v){
 			return iterator->second;
