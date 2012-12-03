@@ -22,4 +22,6 @@
 
 //std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G);
 
-std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G, bool heur);
+
+std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G, bool heur); //new version of method call that decides whether or not we are using
+																	 //the heuristic first guess
